@@ -1,0 +1,128 @@
+.video-grid {
+    display: grid;
+    row-gap: 30px;
+    column-gap: 30px;
+    /*inheritan chi anh huong toi cac thuoc tinh
+    text*/
+}
+
+@media (max-width: 750px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 1999px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.thumbnails,
+.video-info-grid {
+    width: 300px;
+}
+
+.thumbnails {
+    width: 100%;
+}
+
+.video-info-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.video-title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+    text-decoration: none;
+    font-family: Roboto, Arial;
+}
+
+/* ảnh sẽ tràn ra ngoài nếu mà kích
+thước của container không đủ chứa ảnh.
+có thể thu bé độ nhỏ của ảnh lại.*/
+
+.profile-picture {
+    /* chiếm toàn bộ container mà đang chứa nó */
+    width: 40px;
+    height: 40px;
+    border-radius: 30px; 
+}
+
+.thumbnail-row {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.channel-picture-container {
+    display: inline-block;
+    position: relative;
+}
+
+.channel-picture-container:hover .tooltip-channel-picture/ {
+    opacity: 1;
+}
+
+.tooltip-channel-picture {
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    position: absolute; 
+    left: 15px;
+    top: 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    z-index: 1;
+    opacity: 0;
+}
+
+
+
+.tooltip-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.tooltip-stat {
+    color: gray;
+}
+
+.video-time {
+    font-weight: 500;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: black;
+    color: white;
+    padding: 4px 10px; /*4px la top and bottom 10px la left and right*/
+    /*Neu la padding: top right bottom left*/
+}
+
+.video-author, .video-stats  {
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+
+.video-author {
+    margin-bottom: 4px;
+}
+
+
+
